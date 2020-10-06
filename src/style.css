@@ -1,0 +1,63 @@
+/* Meme Styling */
+.meme-div {
+    display: inline-block;
+    margin: 5px 8px;
+    position: relative;
+
+}
+
+.remove {
+    color: #104350;
+    transition: linear 0.2s;
+    margin-top: 10px;
+}
+
+.remove:hover {
+    color: #f64f59;
+    transition: linear 0.3s;
+}
+
+.new-meme {
+    color: white;
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 28px;
+    margin: 2px 0 0;
+}
+
+.top,
+.bottom {
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 30px 5px 10px;
+    z-index: 9000;
+    line-height: 30px;
+}
+
+.top {
+    top: 0;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+#meme-wrapper {
+    line-height: 0;
+    column-count: 3;
+    column-gap: 0px;
+    margin: 15px 8px;
+    padding-bottom: 35px;
+}
+
+#meme-wrapper img {
+    width: 100%;
+    height: auto;
+}
