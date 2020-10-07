@@ -1,3 +1,4 @@
+// Get values from DOM and assign classes
 function createMeme(memeImg, topText, bottomText, imgUrl) {
     topText.innerText = document.getElementById('top-text').value;
     topText.setAttribute('class', 'top');
@@ -6,6 +7,7 @@ function createMeme(memeImg, topText, bottomText, imgUrl) {
     bottomText.setAttribute('class', 'bottom');
 }
 
+// Display meme from values
 function showMeme(memeFigure, memeImg, topText, bottomText) {
     memeFigure.appendChild(topText);
     memeFigure.appendChild(memeImg);
@@ -13,12 +15,14 @@ function showMeme(memeFigure, memeImg, topText, bottomText) {
     memeFigure.setAttribute('class', 'new-meme');
 }
 
+// Set up remove function to be called in submitMeme()
 function createRemoveButton(removeBtn, icon) {
     removeBtn.setAttribute('class', 'remove');
     icon.setAttribute('class', 'far fa-window-close');
     removeBtn.appendChild(icon);
 }
 
+// Load meme elements on submit button click/displays meme in meme-wrapper
 function submitMeme(event, form) {
     event.preventDefault();
 
@@ -65,7 +69,7 @@ window.onload = function () {
     });
 };
 
-//! ? reset the 'memeify' button because it interferes with the remove button functionality
+//! ? reset the 'memeify' button because it (maybe) interferes with the remove button functionality
 // function resetButton(event) {
 //   let $event = $(event);
 //   let $original = $event.clone();
