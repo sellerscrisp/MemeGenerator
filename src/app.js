@@ -26,6 +26,7 @@ function createRemoveButton(removeBtn, icon) {
 function submitMeme(event, form) {
     event.preventDefault();
 
+    // Initialize elements
     let memeWrapper = document.getElementById('meme-wrapper');
     let memeDiv = document.createElement('div');
     let memeFigure = document.createElement('figure');
@@ -39,6 +40,7 @@ function submitMeme(event, form) {
     let memeImg = document.createElement('img');
     let imgUrl = document.getElementById('img-url').value;
 
+    // Callback
     createRemoveButton(removeBtn, icon);
     createMeme(memeImg, topText, bottomText, imgUrl);
     showMeme(memeFigure, memeImg, topText, bottomText);
@@ -57,6 +59,7 @@ function submitMeme(event, form) {
 
     // let activeElement = document.getElementById('submit-button');
 
+    // Reset form after every submitted meme
     form.reset();
     // resetElement(activeElement);
 }
